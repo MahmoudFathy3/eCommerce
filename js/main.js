@@ -87,15 +87,17 @@ setInterval(() => {
 
 
 // Add class From Star Projuct
-const Stars = document.querySelectorAll('.fa-star');
+const Stars = document.querySelectorAll('.info-Hot .fa-star');
 Stars.forEach((star, ClickStar) => {
     star.addEventListener('click', (e) => {
         Stars.forEach((otherStar, otheridx) => {
+
             if (otheridx <= ClickStar) {
                 otherStar.classList.add('star-color');
             } else {
                 otherStar.classList.remove('star-color');
             }
+
         });
     });
 });
@@ -178,18 +180,15 @@ Login.forEach(Login => {
                 document.querySelector('.popLog').remove();
             }
         }
-        let inputs = document.querySelectorAll('.popLog form input[name=input]');
-        let submits = document.querySelectorAll('.popLog form input[type=submit]');
-        submits.forEach(submit => {
-            submit.addEventListener('click', (e) => {
-                inputs.forEach(input => {
-                    if (input.value !== '') {
-                        document.querySelector('.popLog').remove();
-                    } else {
-                        e.preventDefault();
-                    }
-                });
-            });
-        });
     });
+});
+
+//Btn Top Scroll Page
+const Btn = document.querySelector('.Top-Scroll');
+window.onscroll = function() {
+    this.scrollY >= 600 ? Btn.classList.add('active-top') : Btn.classList.remove('active-top')
+}
+window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
 });

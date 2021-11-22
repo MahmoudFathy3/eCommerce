@@ -14,6 +14,29 @@ body {
 }
 
 
+/* Top Scroll */
+
+.Top-Scroll {
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    padding: 5px 15px;
+    background-color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.Top-Scroll.active-top {
+    right: 20px;
+}
+
+.Top-Scroll a {
+    color: #FFF;
+}
+
+
 /* Start Setting */
 
 .setting {
@@ -691,11 +714,28 @@ body {
     background-color: #DDD;
     text-align: center;
     margin: 0;
+    margin-right: 40px;
     padding: 0;
 }
 
 .Projucts .Hot.col-12 {
     width: 20%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .Projucts {
+        padding: 30px 0;
+    }
+    .Projucts .Hot.col-12 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Projucts .Hot.col-12 {
+        width: 30%;
+    }
 }
 
 .Projucts .Hot h3 {
@@ -760,13 +800,131 @@ body {
 }
 
 .Projucts .Hot .info-Hot button {
+    position: relative;
     font-size: 20px;
     padding: 10px 35px;
     margin: 0px 0 10px;
-    border: none;
+    border-top: var(--main-color);
     border-radius: 3px;
     background-image: linear-gradient(218deg, var(--main-color), #777);
     color: #FFF;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.Projucts .Hot .info-Hot button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background-image: linear-gradient(190deg, #ffffff6b, #ffffff6b);
+    transform: skewX(-20deg);
+    z-index: -1;
+    animation: login 2s linear infinite;
+}
+
+.Projucts .Hot .info-Hot button:hover::before {
+    width: 20px;
+}
+
+.Projucts .Projuct {
+    width: 76%;
+    float: left;
+    background-color: #f6f6f6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, .1);
+}
+
+.Projucts .Projuct .Projuct-box {
+    width: calc(85% / 3);
+    height: 445px;
+    float: left;
+    background-color: #FFF;
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 18px;
+    margin-right: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Projucts .Projuct .Projuct-box img {
+    width: 194px;
+    height: 259px;
+}
+
+.Projucts .Projuct .Projuct-box img:hover {
+    transform: scale(1.1);
+}
+
+.Projucts .Projuct .Projuct-box h2 {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.Projucts .Projuct .Projuct-box span .fas {
+    color: #AAA;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.Projucts .Projuct .Projuct-box span .fas:hover {
+    color: #ff5722;
+    opacity: 1;
+}
+
+.Projucts .Projuct .Projuct-box span {
+    user-select: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Projucts .Projuct .Projuct-box .price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 7px 0;
+}
+
+.Projucts .Projuct .Projuct-box button {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    padding: 10px 13px;
+    margin: 0px 0 10px;
+    border-top: var(--main-color);
+    border-radius: 3px;
+    background-image: linear-gradient(218deg, var(--main-color), #777);
+    color: #FFF;
+    transition: .3s;
+}
+
+.Projucts .Projuct .Projuct-box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background-image: linear-gradient(190deg, #ffffff6b, #ffffff6b);
+    transform: skewX(-20deg);
+    z-index: -1;
+    animation: login 2s linear infinite;
+}
+
+.Projucts .Projuct .Projuct-box button:hover::before {
+    width: 20px;
 }
 
 
