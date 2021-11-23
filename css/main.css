@@ -26,6 +26,7 @@ body {
     font-weight: bold;
     border-radius: 50%;
     transition: .4s;
+    cursor: pointer;
 }
 
 .Top-Scroll.active-top {
@@ -161,6 +162,7 @@ body {
     font-size: 25px;
     line-height: 2.6;
     float: left;
+    user-select: none;
 }
 
 .Header nav span .fas {
@@ -168,7 +170,8 @@ body {
     margin-right: 3px;
 }
 
-.Header nav ul {
+
+/* .Header nav ul {
     position: relative;
     padding: 0px;
     margin: 0;
@@ -176,11 +179,58 @@ body {
     justify-content: center;
     align-items: center;
     /* column-gap: 20px; */
+
+
+/* }
+@media (max-width: 991px) {
+    .Header nav ul {
+        display: none;
+    }
+}
+.Header nav ul li {
+    position: relative;
+    padding: 15px;
+    margin: 0;
+    line-height: 2;
+    z-index: 1;
+    cursor: pointer;
+}
+.Header nav ul li a {
+    color: #FFF;
+    font-size: 17px;
+}
+.Header nav ul li::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--main-color);
+    z-index: -1;
+    transition: .4s;
+}
+.Header nav ul li:hover::before {
+    width: 100%;
+}
+.Header nav ul li:hover {
+    background-color: #f6f6f62e;
+} */
+
+.Header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @media (max-width: 991px) {
     .Header nav ul {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -193,52 +243,25 @@ body {
     cursor: pointer;
 }
 
-.Header nav ul li a {
-    color: #FFF;
-    font-size: 17px;
+.Header nav ul .fas {
+    line-height: 1;
+    color: var(--main-color);
+    font-size: 25px;
+    cursor: pointer;
 }
 
-.Header nav ul li::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 2px solid var(--main-color);
-    z-index: -1;
-    transition: .4s;
-}
-
-.Header nav ul li:hover::before {
-    width: 100%;
-}
-
-.Header nav ul li:hover {
-    background-color: #f6f6f62e;
-}
-
-.Login {
-    position: absolute;
-    top: 0px;
-    right: 0;
+.Header nav .Login {
+    position: relative;
+    display: inline;
     text-decoration: none;
     padding: 10px 30px;
-    margin: 10px 0;
     background-color: var(--main-color);
     color: #FFF;
     cursor: pointer;
-    z-index: 1;
     overflow: hidden;
 }
 
-@media (max-width: 991px) {
-    .Login {
-        display: none;
-    }
-}
-
-.Login::before {
+.Header nav .Login::before {
     content: '';
     position: absolute;
     top: 0;
@@ -247,16 +270,34 @@ body {
     height: 100%;
     background-image: linear-gradient(190deg, #ffffff6b, #ffffff6b);
     transform: skewX(-20deg);
-    z-index: -1;
     animation: login 2s linear infinite;
 }
 
-.Login:hover::before {
+.Header nav .Login:hover::before {
     width: 10px;
 }
 
-.Login:hover {
+.Header nav .Login:hover {
     color: #FFF;
+}
+
+.Header nav .Logout {
+    display: none;
+}
+
+.Header nav .Logout a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    color: #FFF;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Header nav .WelcomeUser {
+    color: #FFF;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -438,8 +479,8 @@ body {
     background-color: #FFF;
     border-radius: 6px;
     display: none;
-    border-bottom: 3px solid var(--main-color);
-    z-index: 99;
+    border-bottom: 4px solid var(--main-color);
+    z-index: 9;
 }
 
 .Header .toggle.active-menu {
@@ -877,7 +918,7 @@ body {
     cursor: pointer;
 }
 
-.Projucts .Projuct .Projuct-box span .fas:hover {
+.Projucts .Projuct .Projuct-box span .fas.active-Projuct {
     color: #ff5722;
     opacity: 1;
 }
