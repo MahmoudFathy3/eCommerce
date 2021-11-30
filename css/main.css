@@ -27,6 +27,7 @@ body {
     border-radius: 50%;
     transition: .4s;
     cursor: pointer;
+    z-index: 10;
 }
 
 .Top-Scroll.active-top {
@@ -678,17 +679,19 @@ body {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1399px) {
     .categories .slideShow .info {
         margin: 50px 0;
     }
 }
 
-@media (min-width: 1200px) {
+
+ 
+ @media (min-width: 1400px)  {
     .categories .slideShow .info {
         margin: 70px 0;
     }
-}
+}  
 
 .categories .slideShow .info h2 {
     color: var(--main-color);
@@ -755,7 +758,7 @@ body {
     background-color: #DDD;
     text-align: center;
     margin: 0;
-    margin-right: 40px;
+    margin-right: 30px;
     padding: 0;
 }
 
@@ -769,15 +772,15 @@ body {
         padding: 30px 0;
     }
     .Projucts .Hot.col-12 {
-        width: 100%;
+        width: 100%; 
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+ @media (min-width: 768px) and (max-width: 991px) {
     .Projucts .Hot.col-12 {
-        width: 30%;
+        width: 100%;
     }
-}
+} 
 
 .Projucts .Hot h3 {
     margin: 0;
@@ -881,6 +884,25 @@ body {
     box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, .1);
 }
 
+@media (max-width: 767px) {
+    .Projucts .Projuct {
+        width: 100%;
+        margin: auto;
+
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .Projucts .Projuct {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Projucts .Projuct {
+        width: calc(100% - 25%);
+    }
+}
+
 .Projucts .Projuct .Projuct-box {
     width: calc(85% / 3);
     height: 445px;
@@ -895,6 +917,39 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+@media (max-width: 767px) {
+    .Projucts .Projuct .Projuct-box{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Projucts .Projuct .Projuct-box {
+        width: 48%;
+        margin: 0 5px 20px;
+        
+
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Projucts .Projuct .Projuct-box{
+        width: 48%;
+        margin: 0 5px 20px;
+
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .Projucts .Projuct .Projuct-box{
+        width: calc(96% / 3);
+        margin: 0 5px 20px;
+    }
+} 
+
 
 .Projucts .Projuct .Projuct-box img {
     width: 194px;
@@ -950,6 +1005,13 @@ body {
     color: #FFF;
     transition: .3s;
 }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .Projucts .Projuct .Projuct-box button{
+        padding: 10px 12px;
+    }
+} 
+
 
 .Projucts .Projuct .Projuct-box button::before {
     content: '';

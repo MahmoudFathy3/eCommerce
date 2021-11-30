@@ -264,7 +264,7 @@ function CheckLoginEmpty() {
         if (emailLogin.value === "" || PasswordLogin.value === "") {
             alert('its is Empty');
 
-        } else if (setEmail.trim() == emailLogin.value && setPassword == PasswordLogin.value) {
+        } else if (setEmail == emailLogin.value && setPassword == PasswordLogin.value) {
 
             document.querySelector('.Header nav .Login').style.display = 'none';
             document.querySelector('.Header .Logout').style.display = 'block';
